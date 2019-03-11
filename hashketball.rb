@@ -122,6 +122,7 @@ def num_points_scored(name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player, data|
       name == player.to_s ? (return data[:points]) : false
+
     end
   end
 end
@@ -129,7 +130,9 @@ end
 def shoe_size(name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |player, data|
+
       name == player.to_s ? (return data[:shoe]) : false
+
     end
   end
 end
@@ -174,4 +177,5 @@ def big_shoe_rebounds
   end
   stats_list.sort! { |a, b| b[:shoe] <=> a[:shoe] }
   return stats_list.first[:rebounds]
+
 end
